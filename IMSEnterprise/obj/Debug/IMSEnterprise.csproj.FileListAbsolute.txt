@@ -1,0 +1,16 @@
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.CustomCheckedListBox.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.AboutBox.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.IMSFileInformationForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.IMSOptions.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.InputDialog.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.MainForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.NewPersonForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.PreviewCurrentFile.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.PreviewCurrentLogFile.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.Properties.Resources.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.UrlInputDialog.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.csproj.GenerateResource.Cache
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\bin\Debug\IMSEnterprise.exe
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\bin\Debug\IMSEnterprise.pdb
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.exe
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.pdb

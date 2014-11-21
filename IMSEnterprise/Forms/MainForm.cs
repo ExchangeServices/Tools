@@ -971,7 +971,7 @@ namespace IMSEnterprise
         {
             try
             {
-                this.fileInformationForm = new IMSFileInformationForm(new FileInfo(this.currentFilePath), this.currentFileLoadTime.ToString() + " ms", this.ep.person.Count, this.ep.group.Count, this.ep.membership.Length, this.downloadAndProcessTime);
+                this.fileInformationForm = new IMSFileInformationForm(new FileInfo(this.currentFilePath), this.currentFileLoadTime.ToString() + " ms", this.ep.person.Count, this.ep.group.Count, this.ep.membership.Count, this.downloadAndProcessTime);
                 this.fileInformationForm.ShowDialog();
             }
             catch(Exception ex)

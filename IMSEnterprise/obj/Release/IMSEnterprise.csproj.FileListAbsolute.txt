@@ -1,0 +1,16 @@
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\bin\Release\IMSEnterprise.exe
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\bin\Release\IMSEnterprise.pdb
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.CustomCheckedListBox.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.AboutBox.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.IMSFileInformationForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.IMSOptions.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.InputDialog.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.MainForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.NewPersonForm.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.PreviewCurrentFile.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.PreviewCurrentLogFile.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.Properties.Resources.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.UrlInputDialog.resources
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.csproj.GenerateResource.Cache
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.exe
+C:\Users\sjosuerl\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.pdb

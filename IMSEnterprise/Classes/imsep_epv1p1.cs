@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 // 
@@ -28,11 +29,11 @@ public partial class enterprise {
     
     private properties propertiesField;
     
-    private person[] personField;
+    private List<person> personField;
     
-    private group[] groupField;
+    private List<group> groupField;
     
-    private membership[] membershipField;
+    private List<membership> membershipField;
     
     /// <remarks/>
     public comments comments {
@@ -56,7 +57,7 @@ public partial class enterprise {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("person")]
-    public person[] person {
+    public List<person> person {
         get {
             return this.personField;
         }
@@ -67,7 +68,7 @@ public partial class enterprise {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("group")]
-    public group[] group {
+    public List<group> group {
         get {
             return this.groupField;
         }
@@ -78,7 +79,7 @@ public partial class enterprise {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("membership")]
-    public membership[] membership {
+    public List<membership> membership {
         get {
             return this.membershipField;
         }
@@ -255,7 +256,7 @@ public partial class person {
     
     private comments commentsField;
     
-    private sourcedid[] sourcedidField;
+    private List<sourcedid> sourcedidField;
     
     private userid[] useridField;
     
@@ -297,7 +298,7 @@ public partial class person {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("sourcedid")]
-    public sourcedid[] sourcedid {
+    public List<sourcedid> sourcedid {
         get {
             return this.sourcedidField;
         }
