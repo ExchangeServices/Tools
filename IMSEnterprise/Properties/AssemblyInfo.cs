@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tieto Sweden Healthcare & Welfare AB")]
 [assembly: AssemblyProduct("IMS Enterprise Diagnostic Tool")]
-[assembly: AssemblyCopyright("Copyright © 2014")]
+[assembly: AssemblyCopyright("MIT")]
 [assembly: AssemblyTrademark("IMS Enterprise Tieto")]
 [assembly: AssemblyCulture("")]
 
