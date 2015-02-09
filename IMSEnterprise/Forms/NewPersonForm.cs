@@ -51,7 +51,7 @@ namespace IMSEnterprise
                 createEditButton.Text = "Save";
 
                 sourceIdCurrLabel.Text = editPerson.sourcedid[0].id;
-                if (editPerson.sourcedid.Count == 2)
+                if (editPerson.sourcedid.ToList().Count == 2)
                     sourceIdOldLabel.Text = editPerson.sourcedid[1].id;
 
 

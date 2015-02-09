@@ -104,8 +104,10 @@
     </Compile>
     <Compile Include="Classes\Error.cs" />
     <Compile Include="Classes\ErrorType.cs" />
-    <Compile Include="Classes\imsep_epv1p1.cs" />
     <Compile Include="Classes\IMSSettings.cs" />
+    <Compile Include="Classes\tieto-edu-organization-v1.cs">
+      <SubType>code</SubType>
+    </Compile>
     <Compile Include="Classes\WriteProblemLog.cs" />
     <Compile Include="Classes\XmlFile.cs" />
     <Compile Include="Forms\AboutBox.cs">
@@ -214,6 +216,12 @@
     </EmbeddedResource>
     <None Include="Other\IMSEnterpise.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Other\IMSEnterpise.config.xsc">
+      <DependentUpon>IMSEnterpise.config.xsd</DependentUpon>
+    </None>
+    <None Include="Other\IMSEnterpise.config.xss">
+      <DependentUpon>IMSEnterpise.config.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\IMSEnterprise.config" />

@@ -1,6 +1,7 @@
 ﻿#region Using Directives
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
@@ -333,10 +334,10 @@ namespace IMSEnterprise
                 if(encoding != "iso-8859-1")
                     addProblem(new Error(-1, "Wrong encoding(" + encoding + ") on the IMS Document!", "XML-encoding", ErrorType.Warning, "IMS Document"));
 
-                if (this.ep.group.Count == 0)
+                if (this.ep.group.ToList().Count == 0)
                     addProblem(new Error(-1, "Could not find any groups in the IMS Document!", "Group", ErrorType.Error, "IMS Document"));
 
-                if (this.ep.person.Count == 0)
+                if (this.ep.person.ToList().Count == 0)
                     addProblem(new Error(-1, "Could not find any persons in the IMS Document!", "Person", ErrorType.Warning, "IMS Document"));
 
                 if (this.ep.membership == null)
@@ -378,7 +379,7 @@ namespace IMSEnterprise
                                         {
                                             if (membership.sourcedid.id == group.sourcedid[0].id)
                                             {
-                                                int index = ep.group.IndexOf(group);
+                                                int index = ep.group.ToList().IndexOf(group);
 
                                                 TreeNode node = new TreeNode();
                                                 node.Name = group.grouptype[0].typevalue[0].Value;
@@ -484,7 +485,7 @@ namespace IMSEnterprise
 
         public void insertPerson(person newPerson)
         {
-            this.ep.person.Add(newPerson);
+            this.ep.person.ToList().Add(newPerson);
         }
 
         private enterprise readXmlFile(String uri) // function to the read a xml file from given uri
@@ -616,11 +617,11 @@ namespace IMSEnterprise
                             enterpriseList.Nodes.Remove(node);
                             if (name == "Person")
                             {
-                                ep.person.RemoveAt(index);
+                                ep.person.ToList().RemoveAt(index);
                             }
                             else
                             {
-                                ep.group.RemoveAt(index);
+                                ep.group.ToList().RemoveAt(index);
                             }
                             this.recentSaved = false;
                             saveToolStripMenuItem.Enabled = true;
@@ -730,7 +731,7 @@ namespace IMSEnterprise
         {
             if (ep.person[index].sourcedid != null)
             {
-                if (ep.person[index].sourcedid.Count > 0 && ep.person[index].sourcedid[0].id != null)
+                if (ep.person[index].sourcedid.ToList().Count > 0 && ep.person[index].sourcedid[0].id != null)
                     sourceIdLabel.Text = ep.person[index].sourcedid[0].id.Replace('_', '\x5f');
                 else
                     sourceIdLabel.Text = "";
@@ -775,18 +776,98 @@ namespace IMSEnterprise
 
             if (ep.person[index].extension != null && this.IMSSettings.General.Extensions.Enabled)
             {
-                XmlNode[] result = ep.person[index].extension.Any;
-                foreach (XmlNode x in result[0].ChildNodes)
+                ListViewItem lvi;
+                if (ep.person[index].extension.emailwork.Any())
                 {
-                    if(x.HasChildNodes)
-                    {
-                        ListViewItem lvi = new ListViewItem(new[] { x.Name, x.InnerText });
-
-                        if (this.IMSSettings.General.Extensions.Distinguish)
-                            lvi.ForeColor = Color.Blue;
-
-                       listView.Items.Add(lvi);
-                    }
+                    lvi = new ListViewItem(new[] {"Email work", ep.person[index].extension.emailwork});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.employmentend.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Employment end", ep.person[index].extension.employmentend});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.employmentstart.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Employment start", ep.person[index].extension.employmentstart});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.municipalitycode.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Municipaly code", ep.person[index].extension.municipalitycode});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.municipalityname.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Municipality name", ep.person[index].extension.municipalityname});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.nativelanguage.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Native language", ep.person[index].extension.nativelanguage});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.populationcityadmin.Any())
+                {
+                    lvi =
+                        new ListViewItem(new[] {"Population city admin", ep.person[index].extension.populationcityadmin});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.populationcityarea.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Population city area", ep.person[index].extension.populationcityarea});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.populationkeycode.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Population key code", ep.person[index].extension.populationkeycode});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.privacy.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Privacy", ep.person[index].extension.privacy});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.programcode.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Program code", ep.person[index].extension.programcode});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.signature.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Signature", ep.person[index].extension.signature});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.timestamp.Any())
+                {
+                    lvi = new ListViewItem(new[] {"Timestamp", ep.person[index].extension.timestamp});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
                 }
             }
             else if (this.IMSSettings.General.Extensions.Enabled)
@@ -820,16 +901,132 @@ namespace IMSEnterprise
            
            if(ep.group[index].extension != null && this.IMSSettings.General.Extensions.Enabled)
            {
-               XmlNode[] result = ep.group[index].extension.Any;
-               foreach (XmlNode x in result[0].ChildNodes)
+               ListViewItem lvi;
+               if (ep.group[index].extension.coursecode.Any())
                {
-                   if (x.InnerXml != null && x.InnerXml != "")
-                   {
-                       ListViewItem lvi = new ListViewItem(new[] { x.Name, x.InnerText });
-                       if(this.IMSSettings.General.Extensions.Distinguish)
-                           lvi.ForeColor = Color.Blue;
-                       listView.Items.Add(lvi);
-                   }
+                   lvi = new ListViewItem(new[] {"Course code", ep.group[index].extension.coursecode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.csncode.Any())
+               {
+                   lvi = new ListViewItem(new[] {"CSN code", ep.group[index].extension.csncode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.governedby.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Governed by", ep.group[index].extension.governedby});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.groupusage.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Group usage", ep.group[index].extension.groupusage});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.hours.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Hours", ep.group[index].extension.hours});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.languagecode.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Language code", ep.group[index].extension.languagecode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.locality.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Locality", ep.group[index].extension.locality});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.municipalitycode.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Municipality code", ep.group[index].extension.municipalitycode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.municipalityname.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Municipality name", ep.group[index].extension.municipalityname});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.pcode.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Pcode", ep.group[index].extension.pcode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.phone.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Phone", ep.group[index].extension.phone});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.point.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Point", ep.group[index].extension.point});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.schooltype.Any())
+               {
+                   lvi = new ListViewItem(new[] {"School type", ep.group[index].extension.schooltype});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.schoolyear.Any())
+               {
+                   lvi = new ListViewItem(new[] {"School year", ep.group[index].extension.schoolyear});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.street.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Street", ep.group[index].extension.street});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.subjectcode.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Subject code", ep.group[index].extension.subjectcode});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.timestamp.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Timestamp", ep.group[index].extension.timestamp});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
+               }
+               if (ep.group[index].extension.web.Any())
+               {
+                   lvi = new ListViewItem(new[] {"Web", ep.group[index].extension.web});
+                   if (IMSSettings.General.Extensions.Distinguish)
+                       lvi.ForeColor = Color.Blue;
+                   listView.Items.Add(lvi);
                }
            }
         }
@@ -844,7 +1041,7 @@ namespace IMSEnterprise
             }
             else
             {
-                ep.person.Add(editCreatePerson.getNewPerson());
+                ep.person.ToList().Add(editCreatePerson.getNewPerson());
             }
             this.recentSaved = false;
             saveToolStripMenuItem.Enabled = true;
@@ -971,7 +1168,7 @@ namespace IMSEnterprise
         {
             try
             {
-                this.fileInformationForm = new IMSFileInformationForm(new FileInfo(this.currentFilePath), this.currentFileLoadTime.ToString() + " ms", this.ep.person.Count, this.ep.group.Count, this.ep.membership.Count, this.downloadAndProcessTime);
+                this.fileInformationForm = new IMSFileInformationForm(new FileInfo(this.currentFilePath), this.currentFileLoadTime.ToString() + " ms", this.ep.person.ToList().Count, this.ep.group.ToList().Count, this.ep.membership.ToList().Count, this.downloadAndProcessTime);
                 this.fileInformationForm.ShowDialog();
             }
             catch(Exception ex)
@@ -1366,17 +1563,17 @@ namespace IMSEnterprise
 
                 if (member.role[0].timeframe != null)
                     tips += " from " + member.role[0].timeframe.begin.Value + " to " + member.role[0].timeframe.end.Value;
-
+/*
                 if (member.role[0].extension != null)
                 {
-                    var result = member.role[0].extension.Any;
+                    var result = member.role[0].extension;
                     foreach (XmlNode ext in result[0].ChildNodes)
                     {
                         if ((ext.Name == "course_code" || ext.Name == "subject_code") && ext.InnerText != string.Empty)
                             tips += " " + ext.InnerText;
                     }
                 }
-
+*/
                 node.ToolTipText = tips;
             }
 
@@ -1408,7 +1605,7 @@ namespace IMSEnterprise
 
                 if(member.role[0].timeframe != null)
                    tips += " from " + member.role[0].timeframe.begin.Value + " to " + member.role[0].timeframe.end.Value;
-
+/*
                 if (member.role[0].extension != null)
                 {
                     var result = member.role[0].extension.Any;
@@ -1418,7 +1615,7 @@ namespace IMSEnterprise
                             tips += " " + ext.InnerText;
                     }
                 }
-
+                */
                 node.ToolTipText = tips;
             }
 
