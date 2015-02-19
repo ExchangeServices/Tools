@@ -203,6 +203,8 @@ public partial class groupextension {
     
     private period[] periodField;
     
+    private string geographickeycodeField;
+    
     /// <remarks/>
     public string coursecode {
         get {
@@ -393,6 +395,16 @@ public partial class groupextension {
             this.periodField = value;
         }
     }
+    
+    /// <remarks/>
+    public string geographickeycode {
+        get {
+            return this.geographickeycodeField;
+        }
+        set {
+            this.geographickeycodeField = value;
+        }
+    }
 }
 
 /// <remarks/>
@@ -535,11 +547,7 @@ public partial class personextension {
     
     private string emailworkField;
     
-    private string populationkeycodeField;
-    
-    private string populationcityareaField;
-    
-    private string populationcityadminField;
+    private string geographickeycodeField;
     
     private string municipalitycodeField;
     
@@ -582,32 +590,12 @@ public partial class personextension {
     }
     
     /// <remarks/>
-    public string populationkeycode {
+    public string geographickeycode {
         get {
-            return this.populationkeycodeField;
+            return this.geographickeycodeField;
         }
         set {
-            this.populationkeycodeField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string populationcityarea {
-        get {
-            return this.populationcityareaField;
-        }
-        set {
-            this.populationcityareaField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string populationcityadmin {
-        get {
-            return this.populationcityadminField;
-        }
-        set {
-            this.populationcityadminField = value;
+            this.geographickeycodeField = value;
         }
     }
     

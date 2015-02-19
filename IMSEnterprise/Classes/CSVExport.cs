@@ -376,23 +376,9 @@ namespace IMSEnterprise
                 else
                     personCSV += " ,";
 
-                if (person.extension.populationcityadmin != null)
+                if (person.extension.geographickeycode != null)
                 {
-                    personCSV += person.extension.populationcityadmin + ",";
-                }
-                else
-                    personCSV += " ,";
-
-                if (person.extension.populationcityarea != null)
-                {
-                    personCSV += person.extension.populationcityarea + ",";
-                }
-                else
-                    personCSV += " ,";
-
-                if (person.extension.populationkeycode != null)
-                {
-                    personCSV += person.extension.populationkeycode + ",";
+                    personCSV += person.extension.geographickeycode + ",";
                 }
                 else
                     personCSV += " ,";

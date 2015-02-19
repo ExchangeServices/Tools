@@ -819,24 +819,9 @@ namespace IMSEnterprise
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.populationcityadmin != null && ep.person[index].extension.populationcityadmin.Any())
+                if (ep.person[index].extension.geographickeycode != null && ep.person[index].extension.geographickeycode.Any())
                 {
-                    lvi =
-                        new ListViewItem(new[] {"Population city admin", ep.person[index].extension.populationcityadmin});
-                    if (IMSSettings.General.Extensions.Distinguish)
-                        lvi.ForeColor = Color.Blue;
-                    listView.Items.Add(lvi);
-                }
-                if (ep.person[index].extension.populationcityarea != null && ep.person[index].extension.populationcityarea.Any())
-                {
-                    lvi = new ListViewItem(new[] {"Population city area", ep.person[index].extension.populationcityarea});
-                    if (IMSSettings.General.Extensions.Distinguish)
-                        lvi.ForeColor = Color.Blue;
-                    listView.Items.Add(lvi);
-                }
-                if (ep.person[index].extension.populationkeycode != null && ep.person[index].extension.populationkeycode.Any())
-                {
-                    lvi = new ListViewItem(new[] {"Population key code", ep.person[index].extension.populationkeycode});
+                    lvi = new ListViewItem(new[] { "Geographic key code", ep.person[index].extension.geographickeycode });
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
