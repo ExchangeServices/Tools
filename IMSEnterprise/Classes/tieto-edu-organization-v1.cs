@@ -545,7 +545,7 @@ public partial class personextension {
     
     private string municipalitynameField;
     
-    private string nativelanguageField;
+    private string[] nativelanguageField;
     
     private string programcodeField;
     
@@ -632,7 +632,8 @@ public partial class personextension {
     }
     
     /// <remarks/>
-    public string nativelanguage {
+    [System.Xml.Serialization.XmlElementAttribute("nativelanguage")]
+    public string[] nativelanguage {
         get {
             return this.nativelanguageField;
         }

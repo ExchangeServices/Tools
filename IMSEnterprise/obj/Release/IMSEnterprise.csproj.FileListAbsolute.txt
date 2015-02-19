@@ -1,6 +1,5 @@
 C:\Education\Tools-master\IMSEnterprise\bin\Release\IMSEnterprise.exe
 C:\Education\Tools-master\IMSEnterprise\bin\Release\IMSEnterprise.pdb
-C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.csprojResolveAssemblyReference.cache
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.CustomCheckedListBox.resources
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.AboutBox.resources
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.IMSFileInformationForm.resources

@@ -777,49 +777,49 @@ namespace IMSEnterprise
             if (ep.person[index].extension != null && this.IMSSettings.General.Extensions.Enabled)
             {
                 ListViewItem lvi;
-                if (ep.person[index].extension.emailwork.Any())
+                if (ep.person[index].extension.emailwork != null && ep.person[index].extension.emailwork.Any())
                 {
                     lvi = new ListViewItem(new[] {"Email work", ep.person[index].extension.emailwork});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.employmentend.Any())
+                if (ep.person[index].extension.employmentend != null && ep.person[index].extension.employmentend.Any())
                 {
                     lvi = new ListViewItem(new[] {"Employment end", ep.person[index].extension.employmentend});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.employmentstart.Any())
+                if (ep.person[index].extension.employmentstart != null && ep.person[index].extension.employmentstart.Any())
                 {
                     lvi = new ListViewItem(new[] {"Employment start", ep.person[index].extension.employmentstart});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.municipalitycode.Any())
+                if (ep.person[index].extension.municipalitycode != null && ep.person[index].extension.municipalitycode.Any())
                 {
                     lvi = new ListViewItem(new[] {"Municipaly code", ep.person[index].extension.municipalitycode});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.municipalityname.Any())
+                if (ep.person[index].extension.municipalityname != null && ep.person[index].extension.municipalityname.Any())
                 {
                     lvi = new ListViewItem(new[] {"Municipality name", ep.person[index].extension.municipalityname});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.nativelanguage.Any())
+                if (ep.person[index].extension.nativelanguage != null && ep.person[index].extension.nativelanguage.Any())
                 {
-                    lvi = new ListViewItem(new[] {"Native language", ep.person[index].extension.nativelanguage});
+                    lvi = new ListViewItem(new[] {"Native language", ep.person[index].extension.nativelanguage[0]});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.populationcityadmin.Any())
+                if (ep.person[index].extension.populationcityadmin != null && ep.person[index].extension.populationcityadmin.Any())
                 {
                     lvi =
                         new ListViewItem(new[] {"Population city admin", ep.person[index].extension.populationcityadmin});
@@ -827,42 +827,42 @@ namespace IMSEnterprise
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.populationcityarea.Any())
+                if (ep.person[index].extension.populationcityarea != null && ep.person[index].extension.populationcityarea.Any())
                 {
                     lvi = new ListViewItem(new[] {"Population city area", ep.person[index].extension.populationcityarea});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.populationkeycode.Any())
+                if (ep.person[index].extension.populationkeycode != null && ep.person[index].extension.populationkeycode.Any())
                 {
                     lvi = new ListViewItem(new[] {"Population key code", ep.person[index].extension.populationkeycode});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.privacy.Any())
+                if (ep.person[index].extension.privacy != null && ep.person[index].extension.privacy.Any())
                 {
                     lvi = new ListViewItem(new[] {"Privacy", ep.person[index].extension.privacy});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.programcode.Any())
+                if (ep.person[index].extension.programcode != null && ep.person[index].extension.programcode.Any())
                 {
                     lvi = new ListViewItem(new[] {"Program code", ep.person[index].extension.programcode});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.signature.Any())
+                if (ep.person[index].extension.signature != null && ep.person[index].extension.signature.Any())
                 {
                     lvi = new ListViewItem(new[] {"Signature", ep.person[index].extension.signature});
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.timestamp.Any())
+                if (ep.person[index].extension.timestamp != null && ep.person[index].extension.timestamp.Any())
                 {
                     lvi = new ListViewItem(new[] {"Timestamp", ep.person[index].extension.timestamp});
                     if (IMSSettings.General.Extensions.Distinguish)
@@ -909,119 +909,119 @@ namespace IMSEnterprise
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.csncode.Any())
+               if (ep.group[index].extension.csncode != null && ep.group[index].extension.csncode.Any())
                {
                    lvi = new ListViewItem(new[] {"CSN code", ep.group[index].extension.csncode});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.governedby.Any())
+               if (ep.group[index].extension.governedby != null && ep.group[index].extension.governedby.Any())
                {
                    lvi = new ListViewItem(new[] {"Governed by", ep.group[index].extension.governedby});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.groupusage.Any())
+               if (ep.group[index].extension.groupusage != null && ep.group[index].extension.groupusage.Any())
                {
                    lvi = new ListViewItem(new[] {"Group usage", ep.group[index].extension.groupusage});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.hours.Any())
+               if (ep.group[index].extension.hours != null && ep.group[index].extension.hours.Any())
                {
                    lvi = new ListViewItem(new[] {"Hours", ep.group[index].extension.hours});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.languagecode.Any())
+               if (ep.group[index].extension.languagecode != null && ep.group[index].extension.languagecode.Any())
                {
                    lvi = new ListViewItem(new[] {"Language code", ep.group[index].extension.languagecode});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.locality.Any())
+               if (ep.group[index].extension.locality != null && ep.group[index].extension.locality.Any())
                {
                    lvi = new ListViewItem(new[] {"Locality", ep.group[index].extension.locality});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.municipalitycode.Any())
+               if (ep.group[index].extension.municipalitycode != null && ep.group[index].extension.municipalitycode.Any())
                {
                    lvi = new ListViewItem(new[] {"Municipality code", ep.group[index].extension.municipalitycode});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.municipalityname.Any())
+               if (ep.group[index].extension.municipalityname != null && ep.group[index].extension.municipalityname.Any())
                {
                    lvi = new ListViewItem(new[] {"Municipality name", ep.group[index].extension.municipalityname});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.pcode.Any())
+               if (ep.group[index].extension.pcode != null && ep.group[index].extension.pcode.Any())
                {
                    lvi = new ListViewItem(new[] {"Pcode", ep.group[index].extension.pcode});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.phone.Any())
+               if (ep.group[index].extension.phone != null && ep.group[index].extension.phone.Any())
                {
                    lvi = new ListViewItem(new[] {"Phone", ep.group[index].extension.phone});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.point.Any())
+               if (ep.group[index].extension.point != null && ep.group[index].extension.point.Any())
                {
                    lvi = new ListViewItem(new[] {"Point", ep.group[index].extension.point});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.schooltype.Any())
+               if (ep.group[index].extension.schooltype != null && ep.group[index].extension.schooltype.Any())
                {
                    lvi = new ListViewItem(new[] {"School type", ep.group[index].extension.schooltype});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.schoolyear.Any())
+               if (ep.group[index].extension.schoolyear != null && ep.group[index].extension.schoolyear.Any())
                {
                    lvi = new ListViewItem(new[] {"School year", ep.group[index].extension.schoolyear});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.street.Any())
+               if (ep.group[index].extension.street != null && ep.group[index].extension.street.Any())
                {
                    lvi = new ListViewItem(new[] {"Street", ep.group[index].extension.street});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.subjectcode.Any())
+               if (ep.group[index].extension.subjectcode != null && ep.group[index].extension.subjectcode.Any())
                {
                    lvi = new ListViewItem(new[] {"Subject code", ep.group[index].extension.subjectcode});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.timestamp.Any())
+               if (ep.group[index].extension.timestamp != null && ep.group[index].extension.timestamp.Any())
                {
                    lvi = new ListViewItem(new[] {"Timestamp", ep.group[index].extension.timestamp});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.web.Any())
+               if (ep.group[index].extension.web != null && ep.group[index].extension.web.Any())
                {
                    lvi = new ListViewItem(new[] {"Web", ep.group[index].extension.web});
                    if (IMSSettings.General.Extensions.Distinguish)
