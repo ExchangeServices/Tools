@@ -169,6 +169,8 @@ public partial class groupextension {
     
     private string subjectcodeField;
     
+    private string subjectnameField;
+    
     private string pointField;
     
     private string hoursField;
@@ -222,6 +224,16 @@ public partial class groupextension {
         }
         set {
             this.subjectcodeField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public string subjectname {
+        get {
+            return this.subjectnameField;
+        }
+        set {
+            this.subjectnameField = value;
         }
     }
     
@@ -416,7 +428,7 @@ public partial class groupextension {
 [System.Xml.Serialization.XmlRootAttribute(Namespace="http://open.tieto.com/edu/organization/v1", IsNullable=false)]
 public partial class period {
     
-    private string typeField;
+    private periodtype typeField;
     
     private string startField;
     
@@ -425,15 +437,15 @@ public partial class period {
     private string valueField;
     
     public period() {
-        this.typeField = "1";
+        this.typeField = periodtype.Semester;
         this.startField = "1";
         this.endField = "1";
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    [System.ComponentModel.DefaultValueAttribute("1")]
-    public string type {
+    [System.ComponentModel.DefaultValueAttribute(periodtype.Semester)]
+    public periodtype type {
         get {
             return this.typeField;
         }
@@ -476,6 +488,22 @@ public partial class period {
             this.valueField = value;
         }
     }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+[System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://open.tieto.com/edu/organization/v1")]
+public enum periodtype {
+    
+    /// <remarks/>
+    Years,
+    
+    /// <remarks/>
+    Year,
+    
+    /// <remarks/>
+    Semester,
 }
 
 /// <remarks/>

@@ -14,3 +14,4 @@ C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.UrlInputDialog
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.csproj.GenerateResource.Cache
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.exe
 C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.pdb
+C:\Education\Tools-master\IMSEnterprise\obj\Release\IMSEnterprise.csprojResolveAssemblyReference.cache
