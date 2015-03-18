@@ -165,6 +165,8 @@ public partial class membershipextension {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://open.tieto.com/edu/organization/v1")]
 public partial class groupextension {
     
+    private string idField;
+    
     private string coursecodeField;
     
     private string subjectcodeField;
@@ -206,6 +208,16 @@ public partial class groupextension {
     private period[] periodField;
     
     private string geographickeycodeField;
+    
+    /// <remarks/>
+    public string id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
     
     /// <remarks/>
     public string coursecode {
@@ -3049,6 +3061,9 @@ public enum roleRoletype {
     
     /// <remarks/>
     DepartmentGroup,
+    
+    /// <remarks/>
+    Principal,
 }
 
 /// <remarks/>
