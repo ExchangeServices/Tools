@@ -847,9 +847,16 @@ namespace IMSEnterprise
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
                 }
-                if (ep.person[index].extension.timestamp != null && ep.person[index].extension.timestamp.Any())
+                if (ep.person[index].extension.timestampSpecified)
                 {
-                    lvi = new ListViewItem(new[] {"Timestamp", ep.person[index].extension.timestamp});
+                    lvi = new ListViewItem(new[] {"Timestamp", ep.person[index].extension.timestamp.ToString()});
+                    if (IMSSettings.General.Extensions.Distinguish)
+                        lvi.ForeColor = Color.Blue;
+                    listView.Items.Add(lvi);
+                }
+                if (ep.person[index].extension.schoolunitcode != null)
+                {
+                    lvi = new ListViewItem(new[] { "School unit code", ep.person[index].extension.schoolunitcode });
                     if (IMSSettings.General.Extensions.Distinguish)
                         lvi.ForeColor = Color.Blue;
                     listView.Items.Add(lvi);
@@ -887,7 +894,7 @@ namespace IMSEnterprise
            if(ep.group[index].extension != null && this.IMSSettings.General.Extensions.Enabled)
            {
                ListViewItem lvi;
-               if (ep.group[index].extension.coursecode.Any())
+               if (ep.group[index].extension.coursecode != null)
                {
                    lvi = new ListViewItem(new[] {"Course code", ep.group[index].extension.coursecode});
                    if (IMSSettings.General.Extensions.Distinguish)
@@ -999,9 +1006,9 @@ namespace IMSEnterprise
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
-               if (ep.group[index].extension.timestamp != null && ep.group[index].extension.timestamp.Any())
+               if (ep.group[index].extension.timestampSpecified)
                {
-                   lvi = new ListViewItem(new[] {"Timestamp", ep.group[index].extension.timestamp});
+                   lvi = new ListViewItem(new[] {"Timestamp", ep.group[index].extension.timestamp.ToString()});
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
@@ -1590,6 +1597,17 @@ namespace IMSEnterprise
 
                 if(member.role[0].timeframe != null)
                    tips += " from " + member.role[0].timeframe.begin.Value + " to " + member.role[0].timeframe.end.Value;
+
+                if (member.role[0].extension.schoolunitcode.Any())
+                {
+                    tips += ", schoolunitcode=" + member.role[0].extension.schoolunitcode;
+                }
+
+                if (member.role[0].extension.schoolyear.Any())
+                {
+                    tips += ", schoolyear=" + member.role[0].extension.schoolyear;
+                }
+
 /*
                 if (member.role[0].extension != null)
                 {

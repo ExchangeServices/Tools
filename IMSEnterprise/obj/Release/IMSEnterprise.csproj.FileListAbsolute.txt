@@ -31,3 +31,4 @@ C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise
 C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.UrlInputDialog.resources
 C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.csproj.GenerateResource.Cache
 C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\bin\Release\IMSEnterprise.pdb
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Release\IMSEnterprise.csprojResolveAssemblyReference.cache

@@ -132,17 +132,32 @@ public partial class comments {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://open.tieto.com/edu/organization/v1")]
 public partial class membershipextension {
     
-    private string timestampField;
+    private System.DateTime timestampField;
+    
+    private bool timestampFieldSpecified;
     
     private string schoolyearField;
     
+    private string schoolunitcodeField;
+    
     /// <remarks/>
-    public string timestamp {
+    public System.DateTime timestamp {
         get {
             return this.timestampField;
         }
         set {
             this.timestampField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool timestampSpecified {
+        get {
+            return this.timestampFieldSpecified;
+        }
+        set {
+            this.timestampFieldSpecified = value;
         }
     }
     
@@ -153,6 +168,16 @@ public partial class membershipextension {
         }
         set {
             this.schoolyearField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public string schoolunitcode {
+        get {
+            return this.schoolunitcodeField;
+        }
+        set {
+            this.schoolunitcodeField = value;
         }
     }
 }
@@ -201,7 +226,9 @@ public partial class groupextension {
     
     private string groupusageField;
     
-    private string timestampField;
+    private System.DateTime timestampField;
+    
+    private bool timestampFieldSpecified;
     
     private string languagecodeField;
     
@@ -390,12 +417,23 @@ public partial class groupextension {
     }
     
     /// <remarks/>
-    public string timestamp {
+    public System.DateTime timestamp {
         get {
             return this.timestampField;
         }
         set {
             this.timestampField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool timestampSpecified {
+        get {
+            return this.timestampFieldSpecified;
+        }
+        set {
+            this.timestampFieldSpecified = value;
         }
     }
     
@@ -603,9 +641,11 @@ public partial class personextension {
     
     private string signatureField;
     
-    private string[] schoolunitcodeField;
+    private string schoolunitcodeField;
     
-    private string timestampField;
+    private System.DateTime timestampField;
+    
+    private bool timestampFieldSpecified;
     
     private altadr altadrField;
     
@@ -711,8 +751,7 @@ public partial class personextension {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("schoolunitcode")]
-    public string[] schoolunitcode {
+    public string schoolunitcode {
         get {
             return this.schoolunitcodeField;
         }
@@ -722,12 +761,23 @@ public partial class personextension {
     }
     
     /// <remarks/>
-    public string timestamp {
+    public System.DateTime timestamp {
         get {
             return this.timestampField;
         }
         set {
             this.timestampField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool timestampSpecified {
+        get {
+            return this.timestampFieldSpecified;
+        }
+        set {
+            this.timestampFieldSpecified = value;
         }
     }
     

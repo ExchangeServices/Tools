@@ -1,0 +1,17 @@
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\bin\Debug\IMSEnterprise.exe
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\bin\Debug\IMSEnterprise.pdb
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.csprojResolveAssemblyReference.cache
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.CustomCheckedListBox.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.AboutBox.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.IMSFileInformationForm.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.IMSOptions.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.InputDialog.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.MainForm.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.NewPersonForm.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.PreviewCurrentFile.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.PreviewCurrentLogFile.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.Properties.Resources.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.UrlInputDialog.resources
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.csproj.GenerateResource.Cache
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.exe
+C:\Users\nilssken\Documents\GitHub\Tools\IMSEnterprise\obj\Debug\IMSEnterprise.pdb
