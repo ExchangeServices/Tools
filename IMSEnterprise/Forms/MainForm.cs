@@ -978,13 +978,15 @@ namespace IMSEnterprise
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
+
                if (ep.group[index].extension.schooltype != null && ep.group[index].extension.schooltype.Any())
                {
-                   lvi = new ListViewItem(new[] {"School type", ep.group[index].extension.schooltype});
+                   lvi = new ListViewItem(new [] { "School types", ConvertStringArrayToString(ep.group[index].extension.schooltype) });
                    if (IMSSettings.General.Extensions.Distinguish)
                        lvi.ForeColor = Color.Blue;
                    listView.Items.Add(lvi);
                }
+
                if (ep.group[index].extension.schoolyear != null && ep.group[index].extension.schoolyear.Any())
                {
                    lvi = new ListViewItem(new[] {"School year", ep.group[index].extension.schoolyear});
@@ -1022,6 +1024,18 @@ namespace IMSEnterprise
                }
            }
         }
+
+        static string ConvertStringArrayToString(string[] array)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string value in array)
+            {
+                builder.Append(value);
+                builder.Append(',');
+            }
+            return builder.ToString();
+        }
+
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
             if (editCreatePerson.getEdit() == true)
