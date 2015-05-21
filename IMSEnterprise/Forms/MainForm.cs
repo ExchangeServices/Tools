@@ -1612,7 +1612,7 @@ namespace IMSEnterprise
                 if(member.role[0].timeframe != null)
                    tips += " from " + member.role[0].timeframe.begin.Value + " to " + member.role[0].timeframe.end.Value;
 
-                if (member.role[0].extension.schoolunitcode.Any())
+                if (member.role[0].extension.schoolunitcode != null && member.role[0].extension.schoolunitcode.Any())
                 {
                     tips += ", schoolunitcode=" + member.role[0].extension.schoolunitcode;
                 }
