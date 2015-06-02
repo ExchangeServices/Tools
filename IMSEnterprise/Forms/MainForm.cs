@@ -1617,7 +1617,7 @@ namespace IMSEnterprise
                     tips += ", schoolunitcode=" + member.role[0].extension.schoolunitcode;
                 }
 
-                if (member.role[0].extension.schoolyear.Any())
+                if (member.role[0].extension.schoolyear != null && member.role[0].extension.schoolyear.Any())
                 {
                     tips += ", schoolyear=" + member.role[0].extension.schoolyear;
                 }
